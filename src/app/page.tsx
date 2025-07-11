@@ -29,7 +29,7 @@ export default function MemoryScrapbook() {
       date: "June 30, 2025",
       title: "Our First Date",
       description: "First Date WOOOOO!!",
-      image: "/Scrapbook/Photobooth.JPG",
+      image: "/Photobooth.JPG",
       loveNote:
         "Our first offical date, where I couldnt stop staring at your amazing smile. After you confessing, I felt so relieved and happy, and made me realize how much I love you",
       location: "Brookline",
@@ -39,7 +39,7 @@ export default function MemoryScrapbook() {
       date: "June 29, 2025",
       title: "Study Date!!",
       description: "Dancing under the stars to our favorite band.",
-      image: "/Scrapbook/Study.JPG",
+      image: "/Study.JPG",
       loveNote:
         "This day was a roller coaster of emotions for you, but we were able to study together, cuddle, and even hold hands during the F1 movie. I am so happy that we were able to spend this time together, and I am so grateful for you.",
       location: "Cafe Nero",
@@ -49,7 +49,7 @@ export default function MemoryScrapbook() {
       date: "June 29, 2025",
       title: "ACAI BOWLSSS!!",
       description: "Building blanket forts and sharing secrets on a stormy afternoon.",
-      image: "/Scrapbook/Bowls.JPG",
+      image: "/Bowls.JPG",
       loveNote:
         "We got ACAI BOWLS!!! This was to make up for the fact that I was a bot and a dummy. Thank you for forgiving me.",
       location: "Cafe Nero",
@@ -59,7 +59,7 @@ export default function MemoryScrapbook() {
       date: "July 2, 2025",
       title: "Brandy Haul!",
       description: "Shopping Spree!!!",
-      image: "/Scrapbook/Car.JPG",
+      image: "/Car.JPG",
       loveNote:
         "SHOPPING SPREE!!!",
       location: "Newbury Street",
@@ -69,7 +69,7 @@ export default function MemoryScrapbook() {
       date: "July 2, 2025",
       title: "PIZZA PIZZA",
       description: "Joes Pizza is the best!!!",
-      image: "/Scrapbook/Pizza2.JPG",
+      image: "/Pizza2.JPG",
       loveNote:
         "This day was my favorite, not only did we shop, got pizza, but I even got a KISS from you! This kiss will always be special to me, Thanks to you, you too my kiss viriginity!",
       location: "Joes Pizza",
