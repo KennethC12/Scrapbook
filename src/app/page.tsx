@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import { Heart, Calendar, Camera, MessageCircle, ArrowDown, Upload, X } from "lucide-react"
+import { Heart, Calendar, Camera, MessageCircle, ArrowDown } from "lucide-react"
 import { Button } from "@/src/components/ui/button"
 import { Card, CardContent } from "@/src/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/src/components/ui/dialog"
@@ -23,7 +23,7 @@ interface Memory {
 export default function MemoryScrapbook() {
   const [selectedMemory, setSelectedMemory] = useState<Memory | null>(null)
   const [isLoaded, setIsLoaded] = useState(false)
-  const [memories, setMemories] = useState<Memory[]>([
+  const [memories] = useState<Memory[]>([
     {
       id: 1,
       date: "June 30, 2025",
@@ -31,69 +31,54 @@ export default function MemoryScrapbook() {
       description: "First Date WOOOOO!!",
       image: "/Photobooth.JPG",
       loveNote:
-        "This was the day where I couldn't stop smiling. ",
+        "Our first offical date, where I couldnt stop staring at your amazing smile. After you confessing, I felt so relieved and happy, and made me realize how much I love you",
       location: "Brookline",
     },
     {
       id: 2,
-      date: "July 2, 2025",
-      title: "Brandy Haul!",
-      description: "Shopping Spree!!!",
-      image: "/Car.JPG",
-      loveNote:
-        "",
-      location: "Newbury Street",
-    },
-    {
-      id: 3,
       date: "June 29, 2025",
       title: "Study Date!!",
       description: "Dancing under the stars to our favorite band.",
       image: "/Study.JPG",
       loveNote:
-        "",
-      location: "Central Park",
+        "This day was a roller coaster of emotions for you, but we were able to study together, cuddle, and even hold hands during the F1 movie. I am so happy that we were able to spend this time together, and I am so grateful for you.",
+      location: "Cafe Nero",
     },
     {
-      id: 4,
+      id: 3,
       date: "June 29, 2025",
       title: "ACAI BOWLSSS!!",
       description: "Building blanket forts and sharing secrets on a stormy afternoon.",
       image: "/Bowls.JPG",
       loveNote:
-        "",
+        "We got ACAI BOWLS!!! This was to make up for the fact that I was a bot and a dummy. Thank you for forgiving me.",
       location: "Cafe Nero",
+    },
+    {
+      id: 4,
+      date: "July 2, 2025",
+      title: "Brandy Haul!",
+      description: "Shopping Spree!!!",
+      image: "/Car.JPG",
+      loveNote:
+        "SHOPPING SPREE!!!",
+      location: "Newbury Street",
     },
     {
       id: 5,
       date: "July 2, 2025",
       title: "PIZZA PIZZA",
-      description: "When we tried to make pasta and ended up ordering pizza instead.",
+      description: "Joes Pizza is the best!!!",
       image: "/Pizza2.JPG",
       loveNote:
-        "",
-      location: "Joe's Pizza",
+        "This day was my favorite, not only did we shop, got pizza, but I even got a KISS from you! This kiss will always be special to me, Thanks to you, you too my kiss viriginity!",
+      location: "Joes Pizza",
     },
   ])
 
   useEffect(() => {
     setIsLoaded(true) 
   }, [])
-
-  const handleImageUpload = (memoryId: number, file: File) => {
-    const reader = new FileReader()
-    reader.onload = (e) => {
-      const imageUrl = e.target?.result as string
-      setMemories(prev => 
-        prev.map(memory => 
-          memory.id === memoryId 
-            ? { ...memory, image: imageUrl }
-            : memory
-        )
-      )
-    }
-    reader.readAsDataURL(file)
-  }
 
   // Generate deterministic heart positions and animations
   const heartPositions = [
@@ -295,7 +280,7 @@ export default function MemoryScrapbook() {
                     <Heart className="w-5 h-5 text-rose-500" />
                     <h3 className="text-lg font-semibold text-gray-800">A Love Note</h3>
                   </div>
-                  <p className="text-gray-700 leading-relaxed italic">"{selectedMemory.loveNote}"</p>
+                  <p className="text-gray-700 leading-relaxed italic">&quot;{selectedMemory.loveNote}&quot;</p>
                 </div>
               </div>
             </>
